@@ -67,3 +67,9 @@ class TestShellEmulator(unittest.TestCase):
         result = execute_command('date', self.temp_dir)  # Выполняет команду 'date'
         self.assertIsInstance(result, str, "Expected string from date command")  # Проверяет, что результат - строка
         print("Test 'date' passed.")  # Сообщает о прохождении теста
+
+    def test_exit(self):
+        """Тест команды 'exit'."""
+        result = execute_command('exit', self.temp_dir)  # Выполняет команду 'exit'
+        self.assertEqual(result, 'Exiting', "Expected 'Exiting' message from exit command")  # Проверяет, что результат соответствует ожидаемому сообщению
+        print("Test 'exit' passed.")  # Сообщает о прохождении теста

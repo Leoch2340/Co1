@@ -49,6 +49,6 @@
 
    ![изображение](https://github.com/user-attachments/assets/2e457672-525e-4afc-a483-fef593ee6b98)
    exit
-   
+5. Результаты прогона тестов: 
    ![изображение](https://github.com/user-attachments/assets/bfc6bf8a-d31c-4109-9a17-6da6f6519981)
    python -m unittest tests.py  

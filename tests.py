@@ -47,3 +47,11 @@ class TestShellEmulator(unittest.TestCase):
         self.assertEqual(result, 'cd: non_existing_dir: No such file or directory', 
                          "Expected error message for non-existing directory")  # Проверяет, что возвращается сообщение об ошибке
         print("Test 'cd_invalid_directory' passed.")  # Сообщает о прохождении теста
+
+    def test_mkdir_creates_directory(self):
+        """Тест команды 'mkdir' для создания новой директории."""
+        result = execute_command('mkdir new_dir', self.temp_dir)  # Выполняет команду 'mkdir' для создания директории
+        self.assertEqual(result, 'Directory new_dir created', "Expected directory creation message")  # Проверяет, что возвращается сообщение о создании директории
+        self.assertTrue(os.path.isdir(os.path.join(self.temp_dir, 'new_dir')), 
+                        "Expected 'new_dir' to be created")  # Проверяет, что новая директория действительно создана
+        print("Test 'mkdir_creates_directory' passed.")  # Сообщает о прохождении теста

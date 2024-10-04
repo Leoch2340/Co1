@@ -73,3 +73,6 @@ class TestShellEmulator(unittest.TestCase):
         result = execute_command('exit', self.temp_dir)  # Выполняет команду 'exit'
         self.assertEqual(result, 'Exiting', "Expected 'Exiting' message from exit command")  # Проверяет, что результат соответствует ожидаемому сообщению
         print("Test 'exit' passed.")  # Сообщает о прохождении теста
+
+if __name__ == '__main__':
+    unittest.main()  # Запускает выполнение тестов

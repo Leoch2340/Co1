@@ -38,5 +38,16 @@
    ![изображение](https://github.com/user-attachments/assets/4b4390cd-145d-4914-a0d0-99a94115702c)
    cd
 
+   ![изображение](https://github.com/user-attachments/assets/c1b19f40-bc4b-43a7-9f90-fc13ba5919b6)
+   mkdir
+
+   ![изображение](https://github.com/user-attachments/assets/7383a667-88e5-4a9a-b83d-3d309fad5ed0)
+   uname
+
+   ![изображение](https://github.com/user-attachments/assets/c8061802-9a2c-4701-89f8-8fdd5e8cac4d)
+   date
+
+   ![изображение](https://github.com/user-attachments/assets/2e457672-525e-4afc-a483-fef593ee6b98)
+   exit
    
    

@@ -40,3 +40,10 @@ class TestShellEmulator(unittest.TestCase):
         result = execute_command(f'cd test_dir', self.temp_dir)  # Выполняет команду 'cd' в созданную директорию
         self.assertEqual(result, test_dir, "Expected to change directory to test_dir")  # Проверяет, что результат соответствует пути новой директории
         print("Test 'cd_valid_directory' passed.")  # Сообщает о прохождении теста
+
+    def test_cd_invalid_directory(self):
+        """Тест команды 'cd' в несуществующую директорию."""
+        result = execute_command('cd non_existing_dir', self.temp_dir)  # Выполняет команду 'cd' в несуществующую директорию
+        self.assertEqual(result, 'cd: non_existing_dir: No such file or directory', 
+                         "Expected error message for non-existing directory")  # Проверяет, что возвращается сообщение об ошибке
+        print("Test 'cd_invalid_directory' passed.")  # Сообщает о прохождении теста

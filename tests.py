@@ -6,3 +6,8 @@ import shutil  # Импортирует модуль shutil для работы 
 
 class TestShellEmulator(unittest.TestCase):
     """Класс для тестирования эмулятора оболочки, наследующий unittest.TestCase."""
+
+    def setUp(self):
+        """Создает временную директорию для тестирования."""
+        self.temp_dir = tempfile.mkdtemp()  # Создает временную директорию и сохраняет ее путь в атрибуте класса
+

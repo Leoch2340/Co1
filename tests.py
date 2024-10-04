@@ -55,3 +55,9 @@ class TestShellEmulator(unittest.TestCase):
         self.assertTrue(os.path.isdir(os.path.join(self.temp_dir, 'new_dir')), 
                         "Expected 'new_dir' to be created")  # Проверяет, что новая директория действительно создана
         print("Test 'mkdir_creates_directory' passed.")  # Сообщает о прохождении теста
+
+def test_uname(self):
+        """Тест команды 'uname'."""
+        result = execute_command('uname', self.temp_dir)  # Выполняет команду 'uname'
+        self.assertEqual(result, 'Unix Emulated', "Expected 'Unix Emulated' from uname command")  # Проверяет, что результат соответствует ожидаемому
+        print("Test 'uname' passed.")  # Сообщает о прохождении теста

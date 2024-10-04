@@ -77,3 +77,18 @@ def main():
                 print(result)  # Выводит результат выполнения команды
                 if command.startswith('cd '):  # Если команда 'cd'
                     cwd = result if os.path.isdir(result) else cwd  # Обновляет текущую директорию
+
+    # Цикл интерактивной оболочки
+    print(f"{user}@emulator:{cwd}$ Type 'exit' to leave the shell.")  # Подсказка для пользователя
+    while True:  # Бесконечный цикл для ввода команд
+        try:
+            command = input(f"{user}@emulator:{cwd}$ ").strip()  # Запрашивает ввод команды у пользователя
+            if command == 'exit':  # Если команда 'exit'
+                print("Exiting")  # Выводит сообщение о выходе
+                break  # Выходит из цикла
+            result = execute_command(command, cwd)  # Выполняет команду
+            if isinstance(result, str) and os.path.isdir(result):  # Если результат - строка и это директория
+                cwd = result  # Обновляет текущую директорию
+            print(result)  # Выводит результат выполнения команды
+        except Exception as e:  # Обработка исключений
+            print(f"Error: {e}")  # Выводит сообщение об ошибке

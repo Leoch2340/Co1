@@ -58,3 +58,4 @@ def main():
 
     config = load_config(args.config)  # Загружает конфигурацию из указанного CSV-файла
 
+    user = config.get('username', 'user')  # Получает имя пользователя из конфигурации, по умолчанию 'user'

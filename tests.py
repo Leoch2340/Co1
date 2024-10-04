@@ -32,3 +32,11 @@ class TestShellEmulator(unittest.TestCase):
         result = execute_command('ls', test_dir)  # Выполняет команду 'ls' в директории с файлом
         self.assertEqual(result, ['file.txt'], "Expected file.txt in 'ls' result")  # Проверяет, что результат включает 'file.txt'
         print("Test 'ls_with_files' passed.")  # Сообщает о прохождении теста
+
+    def test_cd_valid_directory(self):
+        """Тест команды 'cd' в существующую директорию."""
+        test_dir = os.path.join(self.temp_dir, 'test_dir')  # Определяет путь к новой директории
+        os.makedirs(test_dir)  # Создает новую директорию
+        result = execute_command(f'cd test_dir', self.temp_dir)  # Выполняет команду 'cd' в созданную директорию
+        self.assertEqual(result, test_dir, "Expected to change directory to test_dir")  # Проверяет, что результат соответствует пути новой директории
+        print("Test 'cd_valid_directory' passed.")  # Сообщает о прохождении теста

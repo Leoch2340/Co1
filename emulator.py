@@ -59,3 +59,4 @@ def main():
     config = load_config(args.config)  # Загружает конфигурацию из указанного CSV-файла
 
     user = config.get('username', 'user')  # Получает имя пользователя из конфигурации, по умолчанию 'user'
+    zip_path = config.get('vfs', 'vfs.zip')  # Получает путь к ZIP-файлу виртуальной файловой системы

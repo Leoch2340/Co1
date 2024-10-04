@@ -31,5 +31,12 @@
 4. Примеры использования в виде скриншотов, желательно в анимированном/видео формате, доступном для web-просмотра:
    ![изображение](https://github.com/user-attachments/assets/629925da-e5ee-4b9e-9f2d-9734122af90a)
    python emulator.py config.csv
+
+   ![изображение](https://github.com/user-attachments/assets/60c6501c-94f9-489a-895f-c587d0e7c174)
+   ls
+
+   ![изображение](https://github.com/user-attachments/assets/4b4390cd-145d-4914-a0d0-99a94115702c)
+   cd
+
    
    

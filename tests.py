@@ -4,3 +4,5 @@ import tempfile  # Импортирует модуль tempfile для рабо�
 from emulator import execute_command  # Импортирует функцию execute_command из модуля emulator
 import shutil  # Импортирует модуль shutil для работы с файлами и директориями
 
+class TestShellEmulator(unittest.TestCase):
+    """Класс для тестирования эмулятора оболочки, наследующий unittest.TestCase."""

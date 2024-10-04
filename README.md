@@ -5,52 +5,52 @@ https://github.com/Leoch2340/Co1
 
 2. Описание всех функций и настроек: <br/>
    Функции эмулятора оболочки: <br/>
-   &nbsp;&nbsp;&nbsp;&nbsp;2.1 extract_zip(zip_path, extract_to)
-       Функция извлекает содержимое ZIP-архива в указанную директорию
-   2.2 load_config(config_path)
-       Загружает настройки из CSV-файла конфигурации и возвращает их в виде словаря
-   2.3 execute_command(command, cwd)
-       Выполняет команду в эмуляторе оболочки и возвращает результат выполнения
-   2.4 main()
-       Основная функция эмулятора оболочки. Загружает конфигурацию, распаковывает виртуальную файловую систему, выполняет начальные команды и запускает интерактивный режим.
-   Настройки в CSV-файле:
-   CSV-файл используется для задания конфигурации эмулятора. Он содержит следующие настройки:
-       username: Имя пользователя, которое будет отображаться в командной строке (например, user).
-       vfs: Путь к ZIP-файлу с виртуальной файловой системой (например, vfs.zip).
-       startscript: Путь к файлу начального сценария, который будет выполнен при старте эмулятора (например, start.sh).
-   Основные тесты:
-       test_ls_empty_directory: Проверяет работу команды ls в пустой директории.
-       test_ls_with_files: Проверяет работу команды ls в директории, содержащей файлы.
-       test_cd_valid_directory: Проверяет команду cd, когда указывается существующая директория.
-       test_cd_invalid_directory: Проверяет команду cd, когда указывается несуществующая директория.
-       test_mkdir_creates_directory: Проверяет создание новой директории с помощью команды mkdir.
-       test_uname: Проверяет работу команды uname, которая должна возвращать строку "Unix Emulated".
-       test_date: Проверяет корректность работы команды date.
-       test_exit: Проверяет работу команды exit, которая завершает сессию.
-3. Описание команд для сборки проекта:
-   Запуск эмулятора - python emulator.py config.csv
-   Запуск тестов - python -m unittest tests.py
-4. Примеры использования в виде скриншотов, желательно в анимированном/видео формате, доступном для web-просмотра:
-   ![изображение](https://github.com/user-attachments/assets/629925da-e5ee-4b9e-9f2d-9734122af90a)
-   python emulator.py config.csv
+   &nbsp;&nbsp;&nbsp;&nbsp;2.1 extract_zip(zip_path, extract_to)<br/>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Функция извлекает содержимое ZIP-архива в указанную директорию<br/>
+   2.2 load_config(config_path)<br/>
+       Загружает настройки из CSV-файла конфигурации и возвращает их в виде словаря<br/>
+   2.3 execute_command(command, cwd)<br/>
+       Выполняет команду в эмуляторе оболочки и возвращает результат выполнения<br/>
+   2.4 main()<br/>
+       Основная функция эмулятора оболочки. Загружает конфигурацию, распаковывает виртуальную файловую систему, выполняет начальные команды и запускает интерактивный режим.<br/>
+   Настройки в CSV-файле:<br/>
+   CSV-файл используется для задания конфигурации эмулятора. Он содержит следующие настройки:<br/>
+       username: Имя пользователя, которое будет отображаться в командной строке (например, user).<br/>
+       vfs: Путь к ZIP-файлу с виртуальной файловой системой (например, vfs.zip).<br/>
+       startscript: Путь к файлу начального сценария, который будет выполнен при старте эмулятора (например, start.sh).<br/>
+   Основные тесты:<br/>
+       test_ls_empty_directory: Проверяет работу команды ls в пустой директории.<br/>
+       test_ls_with_files: Проверяет работу команды ls в директории, содержащей файлы.<br/>
+       test_cd_valid_directory: Проверяет команду cd, когда указывается существующая директория.<br/>
+       test_cd_invalid_directory: Проверяет команду cd, когда указывается несуществующая директория.<br/>
+       test_mkdir_creates_directory: Проверяет создание новой директории с помощью команды mkdir.<br/>
+       test_uname: Проверяет работу команды uname, которая должна возвращать строку "Unix Emulated".<br/>
+       test_date: Проверяет корректность работы команды date.<br/>
+       test_exit: Проверяет работу команды exit, которая завершает сессию.<br/>
+3. Описание команд для сборки проекта:<br/>
+   Запуск эмулятора - python emulator.py config.csv<br/>
+   Запуск тестов - python -m unittest tests.py<br/>
+4. Примеры использования в виде скриншотов, желательно в анимированном/видео формате, доступном для web-просмотра:<br/>
+   ![изображение](https://github.com/user-attachments/assets/629925da-e5ee-4b9e-9f2d-9734122af90a)<br/>
+   python emulator.py config.csv<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/60c6501c-94f9-489a-895f-c587d0e7c174)
-   ls
+   ![изображение](https://github.com/user-attachments/assets/60c6501c-94f9-489a-895f-c587d0e7c174)<br/>
+   ls<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/4b4390cd-145d-4914-a0d0-99a94115702c)
-   cd
+   ![изображение](https://github.com/user-attachments/assets/4b4390cd-145d-4914-a0d0-99a94115702c)<br/>
+   cd<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/c1b19f40-bc4b-43a7-9f90-fc13ba5919b6)
-   mkdir
+   ![изображение](https://github.com/user-attachments/assets/c1b19f40-bc4b-43a7-9f90-fc13ba5919b6)<br/>
+   mkdir<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/7383a667-88e5-4a9a-b83d-3d309fad5ed0)
-   uname
+   ![изображение](https://github.com/user-attachments/assets/7383a667-88e5-4a9a-b83d-3d309fad5ed0)<br/>
+   uname<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/c8061802-9a2c-4701-89f8-8fdd5e8cac4d)
-   date
+   ![изображение](https://github.com/user-attachments/assets/c8061802-9a2c-4701-89f8-8fdd5e8cac4d)<br/>
+   date<br/>
 
-   ![изображение](https://github.com/user-attachments/assets/2e457672-525e-4afc-a483-fef593ee6b98)
-   exit
-5. Результаты прогона тестов: 
-   ![изображение](https://github.com/user-attachments/assets/bfc6bf8a-d31c-4109-9a17-6da6f6519981)
-   python -m unittest tests.py  
+   ![изображение](https://github.com/user-attachments/assets/2e457672-525e-4afc-a483-fef593ee6b98)<br/>
+   exit<br/>
+5. Результаты прогона тестов: <br/>
+   ![изображение](https://github.com/user-attachments/assets/bfc6bf8a-d31c-4109-9a17-6da6f6519981)<br/>
+   python -m unittest tests.py  <br/>

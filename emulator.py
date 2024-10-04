@@ -50,3 +50,5 @@ def execute_command(command, cwd):
     else:  # Если команда не распознана
         return f"{cmd}: command not found"  # Возвращает сообщение об ошибке
 
+def main(): 
+    

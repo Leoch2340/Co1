@@ -56,8 +56,14 @@ class TestShellEmulator(unittest.TestCase):
                         "Expected 'new_dir' to be created")  # Проверяет, что новая директория действительно создана
         print("Test 'mkdir_creates_directory' passed.")  # Сообщает о прохождении теста
 
-def test_uname(self):
+    def test_uname(self):
         """Тест команды 'uname'."""
         result = execute_command('uname', self.temp_dir)  # Выполняет команду 'uname'
         self.assertEqual(result, 'Unix Emulated', "Expected 'Unix Emulated' from uname command")  # Проверяет, что результат соответствует ожидаемому
         print("Test 'uname' passed.")  # Сообщает о прохождении теста
+
+    def test_date(self):
+        """Тест команды 'date'."""
+        result = execute_command('date', self.temp_dir)  # Выполняет команду 'date'
+        self.assertIsInstance(result, str, "Expected string from date command")  # Проверяет, что результат - строка
+        print("Test 'date' passed.")  # Сообщает о прохождении теста

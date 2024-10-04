@@ -60,3 +60,4 @@ def main():
 
     user = config.get('username', 'user')  # Получает имя пользователя из конфигурации, по умолчанию 'user'
     zip_path = config.get('vfs', 'vfs.zip')  # Получает путь к ZIP-файлу виртуальной файловой системы
+    start_script = config.get('startscript', 'start.sh')  # Получает имя стартового скрипта.

@@ -51,4 +51,9 @@ def execute_command(command, cwd):
         return f"{cmd}: command not found"  # Возвращает сообщение об ошибке
 
 def main(): 
+    """Основная функция для эмулятора оболочки."""
+    parser = argparse.ArgumentParser(description='Shell Emulator')  # Создает парсер аргументов
+    parser.add_argument('config', help='Path to the configuration CSV file')  # Добавляет аргумент для пути к конфигурационному файлу
+    args = parser.parse_args()  # Парсит аргументы командной строки
+
     

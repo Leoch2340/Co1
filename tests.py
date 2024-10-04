@@ -11,3 +11,6 @@ class TestShellEmulator(unittest.TestCase):
         """Создает временную директорию для тестирования."""
         self.temp_dir = tempfile.mkdtemp()  # Создает временную директорию и сохраняет ее путь в атрибуте класса
 
+    def tearDown(self):
+        """Удаляет временную директорию после тестов."""
+        shutil.rmtree(self.temp_dir)  # Удаляет временную директорию и все ее содержимое

@@ -29,6 +29,7 @@
    Запуск эмулятора - python emulator.py config.csv
    Запуск тестов - python -m unittest tests.py
 4. Примеры использования в виде скриншотов, желательно в анимированном/видео формате, доступном для web-просмотра:
-   
+   ![изображение](https://github.com/user-attachments/assets/629925da-e5ee-4b9e-9f2d-9734122af90a)
+   python emulator.py config.csv
    
    

@@ -14,3 +14,9 @@ class TestShellEmulator(unittest.TestCase):
     def tearDown(self):
         """Удаляет временную директорию после тестов."""
         shutil.rmtree(self.temp_dir)  # Удаляет временную директорию и все ее содержимое
+
+    def test_ls_empty_directory(self):
+        """Тест команды 'ls' в пустой директории."""
+        result = execute_command('ls', self.temp_dir)  # Выполняет команду 'ls' в пустой временной директории
+        self.assertEqual(result, [], "Expected empty list for 'ls' in an empty directory")  # Проверяет, что результат - пустой список
+        print("Test 'ls_empty_directory' passed.")  # Сообщает о прохождении теста

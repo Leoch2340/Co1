@@ -67,3 +67,13 @@ def main():
     extract_zip(zip_path, temp_dir)  # Извлекает ZIP-файл в временную директорию 
 
     cwd = temp_dir  # Устанавливает текущую директорию на временную директорию
+
+    # Выполняет стартовый скрипт, если он существует
+    if os.path.exists(start_script):
+        with open(start_script) as script:  # Открывает стартовый скрипт для чтения
+            for line in script:  # Для каждой строки в скрипте
+                command = line.strip()  # Удаляет пробелы в начале и конце строки
+                result = execute_command(command, cwd)  # Выполняет команду
+                print(result)  # Выводит результат выполнения команды
+                if command.startswith('cd '):  # Если команда 'cd'
+                    cwd = result if os.path.isdir(result) else cwd  # Обновляет текущую директорию

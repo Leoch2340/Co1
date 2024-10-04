@@ -9,3 +9,10 @@ def extract_zip(zip_path, extract_to):
     """Извлекает ZIP-файл в указанную директорию."""
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:  # Открывает ZIP-файл для чтения
         zip_ref.extractall(extract_to)  # Извлекает все файлы в указанную директорию
+
+def load_config(config_path):
+    """Загружает конфигурацию из CSV-файла."""
+    with open(config_path, newline='') as csvfile:  # Открывает CSV-файл для чтения
+        reader = csv.reader(csvfile)  # Создает объект для чтения строк из CSV
+        config = {row[0]: row[1] for row in reader}  # Создает словарь с конфигурацией
+    return config  # Возвращает загруженную конфигурацию

@@ -56,4 +56,5 @@ def main():
     parser.add_argument('config', help='Path to the configuration CSV file')  # Добавляет аргумент для пути к конфигурационному файлу
     args = parser.parse_args()  # Парсит аргументы командной строки
 
-    
+    config = load_config(args.config)  # Загружает конфигурацию из указанного CSV-файла
+
